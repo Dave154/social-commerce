@@ -1,0 +1,1134 @@
+# JK RENTALS
+
+## Car Rental Business Documentation
+
+**Company Name:** JK Rentals
+**Industry:** Automobile Rental Services
+**Business Type:** Car Rental and Mobility Services
+**Head Office:** 24 Adeola Crescent, Ikeja, Lagos, Nigeria
+**Service Coverage:** Lagos and selected locations across Nigeria
+**Established:** 2022
+**Business Hours:** Monday to Sunday, 7:00 AM to 9:00 PM
+**Customer Support:** +234 800 555 0199
+**Email:** [hello@jkrentals.example](mailto:hello@jkrentals.example)
+**Website:** [www.jkrentals.example](http://www.jkrentals.example)
+
+**Document Version:** 1.0
+**Last Updated:** August 2026
+
+---
+
+# TABLE OF CONTENTS
+
+1. Company Overview
+2. Vision, Mission and Core Values
+3. Our Services
+4. Vehicle Categories
+5. Rental Plans and Pricing
+6. Booking and Rental Process
+7. Driver Requirements
+8. Vehicle Collection and Delivery
+9. Vehicle Inspection and Condition Policy
+10. Fuel and Mileage Policy
+11. Insurance and Protection
+12. Payment and Security Deposit Policy
+13. Cancellation, Modification and Refund Policy
+14. Customer Responsibilities
+15. Prohibited Uses
+16. Accident, Breakdown and Emergency Procedures
+17. Late Returns and Extensions
+18. Corporate and Long-Term Rentals
+19. Privacy and Data Protection
+20. Customer Complaints and Dispute Resolution
+21. Frequently Asked Questions
+22. Terms and Conditions
+23. Service Standards
+24. Contact Information
+
+---
+
+# PAGE 1: COMPANY OVERVIEW
+
+## 1.1 About JK Rentals
+
+JK Rentals is a customer-focused car rental company established to provide convenient, reliable and professionally managed vehicle rental services for individuals, families, tourists, business professionals and corporate organizations.
+
+The company operates on the principle that renting a vehicle should be simple, transparent and dependable. Customers should be able to choose a suitable vehicle, understand the total rental cost, complete the necessary documentation and receive their vehicle without unnecessary complications.
+
+JK Rentals provides short-term, medium-term and long-term vehicle rental solutions. Customers can rent vehicles for personal transportation, business meetings, airport transfers, vacations, weddings, events, temporary transportation needs and corporate assignments.
+
+Our fleet is designed to accommodate different budgets and transportation requirements, ranging from economical compact vehicles to premium SUVs and executive vehicles.
+
+## 1.2 Our Business Philosophy
+
+JK Rentals focuses on solving transportation problems rather than simply providing vehicles.
+
+Our service model is built around five principles:
+
+* Reliable vehicles
+* Transparent pricing
+* Convenient booking
+* Responsive customer support
+* Professional customer experience
+
+We understand that transportation can be time-sensitive. A delayed vehicle, poorly maintained car or unclear rental agreement can create significant problems for a customer. Our operations therefore emphasize preventive maintenance, vehicle inspections and clear communication.
+
+## 1.3 Who We Serve
+
+JK Rentals serves:
+
+* Individuals
+* Families
+* Tourists and visitors
+* Business travelers
+* Corporate organizations
+* Event planners
+* Wedding planners
+* NGOs and development organizations
+* Government contractors
+* Real estate professionals
+* Film and media production companies
+* Travel agencies
+* Small and medium-sized businesses
+
+---
+
+# 2. VISION, MISSION AND CORE VALUES
+
+## 2.1 Vision
+
+To become one of Nigeria's most trusted and customer-focused vehicle rental companies by making professional mobility accessible, convenient and dependable.
+
+## 2.2 Mission
+
+Our mission is to provide safe, well-maintained and suitable vehicles while delivering a transparent rental experience supported by responsive customer service.
+
+## 2.3 Core Values
+
+### Reliability
+
+We understand that customers depend on our vehicles to arrive at destinations on time. Reliability therefore influences every part of our operations.
+
+### Transparency
+
+Customers should know what they are paying for. Our rental quotations clearly identify rental charges, deposits, optional services and applicable fees.
+
+### Safety
+
+Vehicle safety is treated as a fundamental operational requirement. Vehicles undergo routine maintenance and inspections before being released to customers.
+
+### Customer Service
+
+We aim to respond quickly to customer questions, booking requests, changes and complaints.
+
+### Professionalism
+
+Our staff are expected to communicate respectfully, maintain accurate records and handle customer information responsibly.
+
+### Accountability
+
+JK Rentals maintains documented rental agreements, inspection reports and payment records to ensure accountability for both the company and customers.
+
+---
+
+# PAGE 2: OUR SERVICES
+
+# 3. SERVICES OFFERED
+
+## 3.1 Self-Drive Car Rental
+
+Customers who meet JK Rentals' eligibility requirements may rent selected vehicles for self-driving.
+
+Self-drive rentals are suitable for:
+
+* Personal transportation
+* Business activities
+* Family trips
+* Weekend travel
+* Temporary vehicle replacement
+* City transportation
+
+Self-drive availability depends on the vehicle category and customer eligibility.
+
+## 3.2 Chauffeur-Driven Rentals
+
+Customers can request a professional driver with selected vehicles.
+
+Chauffeur services are particularly suitable for:
+
+* Airport transfers
+* Corporate meetings
+* Weddings
+* Conferences
+* VIP transportation
+* City tours
+* Events
+* Executive travel
+
+Chauffeur bookings can be arranged for hourly, daily or multi-day periods.
+
+## 3.3 Airport Transfers
+
+JK Rentals provides scheduled transportation between airports and approved destinations.
+
+Customers should provide:
+
+* Flight number
+* Arrival or departure date
+* Expected arrival/departure time
+* Passenger count
+* Luggage requirements
+* Destination address
+
+Flight information helps our operations team monitor potential schedule changes.
+
+## 3.4 Corporate Rentals
+
+Businesses can establish corporate accounts for recurring vehicle requirements.
+
+Corporate customers may receive:
+
+* Dedicated account management
+* Monthly billing
+* Priority booking
+* Multi-vehicle reservations
+* Long-term rental arrangements
+* Driver services
+* Customized rental agreements
+
+## 3.5 Event and Wedding Rentals
+
+JK Rentals provides premium vehicles for weddings, conferences, photoshoots and special events.
+
+Depending on availability, customers may request:
+
+* Executive sedans
+* Premium SUVs
+* Chauffeur services
+* Multiple vehicles
+* Decoration coordination
+* Extended waiting periods
+
+## 3.6 Long-Term Rentals
+
+Customers requiring a vehicle for more than 30 days may request a long-term rental quotation.
+
+Long-term arrangements may include reduced daily rates, subject to vehicle availability and contract terms.
+
+---
+
+# 4. VEHICLE CATEGORIES
+
+JK Rentals maintains a mixed fleet designed for different transportation requirements.
+
+### Economy
+
+Examples:
+
+* Toyota Corolla
+* Hyundai Accent
+* Kia Rio
+
+Recommended for:
+
+* Individual customers
+* City driving
+* Budget-conscious rentals
+* Short trips
+
+### Comfort
+
+Examples:
+
+* Toyota Camry
+* Honda Accord
+* Hyundai Sonata
+
+Recommended for:
+
+* Business trips
+* Families
+* Longer journeys
+* Comfortable daily transportation
+
+### SUV
+
+Examples:
+
+* Toyota RAV4
+* Toyota Highlander
+* Honda CR-V
+
+Recommended for:
+
+* Families
+* Larger luggage requirements
+* Long-distance travel
+* Customers requiring additional passenger space
+
+### Premium SUV
+
+Examples:
+
+* Toyota Land Cruiser Prado
+* Lexus GX
+* Mercedes-Benz GLE
+
+Recommended for:
+
+* Executive travel
+* Corporate transportation
+* Special occasions
+* VIP assignments
+
+Vehicle availability varies by date and location.
+
+---
+
+# PAGE 3: RENTAL PLANS AND PRICING
+
+# 5. SAMPLE RENTAL PRICING
+
+The following pricing structure is used as a sample standard rate card. Actual prices may vary based on vehicle availability, rental duration, season, location and additional services.
+
+| Vehicle Category  | Daily Rate | Weekly Rate | Security Deposit |
+| ----------------- | ---------: | ----------: | ---------------: |
+| Economy           |    ₦45,000 |    ₦270,000 |         ₦100,000 |
+| Comfort Sedan     |    ₦60,000 |    ₦360,000 |         ₦150,000 |
+| SUV               |    ₦85,000 |    ₦510,000 |         ₦200,000 |
+| Premium SUV       |   ₦150,000 |    ₦900,000 |         ₦300,000 |
+| Executive Vehicle |   ₦180,000 |  ₦1,080,000 |         ₦400,000 |
+
+Rates are illustrative and may change without prior notice.
+
+## 5.1 What Is Included?
+
+Depending on the selected rental plan, the base rental price may include:
+
+* Vehicle rental
+* Routine maintenance
+* Standard vehicle documentation
+* Basic roadside support
+* Pre-rental inspection
+* Post-rental inspection
+
+## 5.2 What May Cost Extra?
+
+Additional charges may apply for:
+
+* Chauffeur services
+* Fuel
+* Additional mileage
+* Delivery outside the standard service area
+* Excessive cleaning
+* Damage repairs
+* Traffic fines
+* Late returns
+* Optional protection packages
+* Additional drivers
+* Special event requirements
+
+## 5.3 Minimum Rental Period
+
+The standard minimum rental period is 24 hours.
+
+A rental day begins at the agreed collection time and ends 24 hours later.
+
+For example, a vehicle collected at 10:00 AM Monday is normally due at 10:00 AM Tuesday.
+
+## 5.4 Additional Hours
+
+A grace period of up to 60 minutes may be provided for returns.
+
+Returns exceeding the grace period may attract additional charges.
+
+---
+
+# 6. BOOKING PROCESS
+
+JK Rentals uses a simple five-step booking process.
+
+### Step 1: Select a Vehicle
+
+The customer chooses a preferred vehicle category or specific vehicle, subject to availability.
+
+### Step 2: Provide Rental Details
+
+Customers provide:
+
+* Pickup location
+* Return location
+* Pickup date
+* Return date
+* Driver information
+* Contact information
+* Additional requirements
+
+### Step 3: Receive a Quote
+
+JK Rentals provides a rental quotation showing the estimated total cost.
+
+### Step 4: Complete Verification
+
+Customers provide the required identification and driving documents.
+
+### Step 5: Confirm Booking
+
+A booking becomes confirmed once the required payment or deposit has been received and the company has issued booking confirmation.
+
+---
+
+# PAGE 4: DRIVER REQUIREMENTS
+
+# 7. CUSTOMER ELIGIBILITY
+
+Customers renting vehicles for self-drive must meet JK Rentals' minimum eligibility requirements.
+
+## 7.1 Age Requirement
+
+The standard minimum age for self-drive rentals is 23 years.
+
+Customers aged 23 to 25 may be subject to additional eligibility requirements or fees for certain vehicle categories.
+
+Premium vehicles may have a higher minimum age requirement.
+
+## 7.2 Driving Licence
+
+The renter must provide a valid driving licence appropriate for the vehicle being rented.
+
+The licence must remain valid throughout the rental period.
+
+## 7.3 Identification
+
+Customers may be required to provide:
+
+* Government-issued identification
+* Valid driving licence
+* Proof of address
+* Valid phone number
+* Additional verification documents where applicable
+
+International visitors may be required to provide a valid passport and appropriate driving documentation.
+
+## 7.4 Additional Drivers
+
+An additional driver may operate the vehicle only after being registered and approved by JK Rentals.
+
+The additional driver must satisfy the same eligibility requirements as the primary renter.
+
+## 7.5 Responsibility for Drivers
+
+The primary renter remains responsible for ensuring that every approved driver complies with the rental agreement.
+
+---
+
+# 8. VEHICLE COLLECTION AND DELIVERY
+
+## 8.1 Pickup
+
+Customers may collect vehicles from designated JK Rentals locations.
+
+At pickup, customers should:
+
+1. Present required documents.
+2. Complete the rental agreement.
+3. Confirm payment/deposit requirements.
+4. Participate in the vehicle inspection.
+5. Confirm fuel level.
+6. Confirm mileage.
+7. Receive the vehicle keys.
+8. Sign the vehicle handover record.
+
+## 8.2 Vehicle Delivery
+
+Vehicle delivery may be available within selected service areas.
+
+Delivery charges depend on:
+
+* Distance
+* Time
+* Vehicle category
+* Delivery location
+* Special requirements
+
+## 8.3 Pickup Delays
+
+Customers who expect to arrive later than the agreed collection time should notify JK Rentals as soon as possible.
+
+Failure to communicate significant delays may affect vehicle availability.
+
+---
+
+# 9. VEHICLE INSPECTION
+
+Every vehicle is inspected before being released.
+
+The inspection may record:
+
+* Exterior condition
+* Interior condition
+* Tyres
+* Lights
+* Mirrors
+* Windows
+* Fuel level
+* Mileage
+* Existing scratches
+* Existing dents
+* Accessories
+* Spare tyre
+* Vehicle tools
+
+Customers are encouraged to inspect the vehicle carefully and report any issue before leaving the pickup location.
+
+Photographs may be taken as part of the inspection record.
+
+---
+
+# PAGE 5: VEHICLE USE AND MAINTENANCE
+
+# 10. FUEL POLICY
+
+JK Rentals normally provides vehicles with a recorded fuel level at pickup.
+
+Customers are expected to return vehicles with the agreed fuel level.
+
+If a vehicle is returned with significantly less fuel, the customer may be charged for:
+
+* Missing fuel
+* Refueling service
+* Applicable administrative charges
+
+Customers should retain fuel receipts when requested.
+
+## 10.1 Mileage
+
+Standard rentals may include a mileage allowance depending on the rental agreement.
+
+For example:
+
+**Daily rental:** 200 km per day
+**Weekly rental:** 1,200 km per week
+
+Excess mileage may be charged according to the vehicle category.
+
+Long-term rental agreements may have customized mileage limits.
+
+---
+
+# 11. VEHICLE MAINTENANCE
+
+JK Rentals is responsible for routine maintenance associated with normal vehicle operation.
+
+Customers should not authorize major repairs without contacting JK Rentals unless immediate action is required to protect safety.
+
+Routine maintenance may include:
+
+* Engine oil servicing
+* Brake inspections
+* Tyre checks
+* Battery checks
+* Fluid checks
+* Air-conditioning checks
+* Scheduled servicing
+
+## 11.1 Warning Lights
+
+If a warning light appears on the dashboard, the customer should contact JK Rentals as soon as reasonably possible.
+
+Customers should not ignore serious warning indicators.
+
+## 11.2 Vehicle Breakdown
+
+If a vehicle becomes disabled, JK Rentals will coordinate appropriate assistance based on the circumstances and location.
+
+---
+
+# 12. INSURANCE AND PROTECTION
+
+JK Rentals maintains vehicle insurance and protection arrangements appropriate to its operating requirements.
+
+Customers should understand that insurance does not necessarily eliminate all financial responsibility.
+
+Depending on the agreement, the customer may remain responsible for:
+
+* Deductibles
+* Damage caused by prohibited use
+* Negligent driving
+* Unauthorized drivers
+* Interior damage
+* Lost keys
+* Tire damage
+* Fuel contamination
+* Traffic violations
+* Damage caused while driving in restricted areas
+
+Customers should review the specific protection terms provided with their rental agreement.
+
+---
+
+# PAGE 6: PAYMENTS AND DEPOSITS
+
+# 13. PAYMENT POLICY
+
+JK Rentals accepts approved payment methods specified during booking.
+
+Payment may be required before vehicle collection.
+
+For certain bookings, a partial payment may be accepted to secure the reservation.
+
+The remaining balance must be paid before or at vehicle collection unless a different written agreement exists.
+
+## 13.1 Security Deposit
+
+A refundable security deposit may be required before the vehicle is released.
+
+The deposit serves as security against potential obligations including:
+
+* Vehicle damage
+* Excess mileage
+* Fuel shortages
+* Late return fees
+* Traffic penalties
+* Lost keys
+* Cleaning charges
+* Other contractual obligations
+
+## 13.2 Deposit Refund
+
+After vehicle return, JK Rentals conducts a final inspection.
+
+If there are no outstanding charges, the security deposit is normally released within 3 to 7 business days.
+
+Processing times may vary depending on the payment provider.
+
+## 13.3 Damage Charges
+
+If damage is identified, JK Rentals will document the issue and may provide supporting photographs, inspection records or repair estimates where appropriate.
+
+The customer's financial responsibility will be determined according to the rental agreement and applicable protection terms.
+
+---
+
+# 14. CANCELLATION POLICY
+
+Customers may cancel a booking subject to the cancellation terms attached to the reservation.
+
+### More than 72 hours before pickup
+
+Customers may generally receive a full or substantial refund of eligible prepaid rental charges.
+
+### 24 to 72 hours before pickup
+
+A cancellation fee may apply.
+
+### Less than 24 hours before pickup
+
+The customer may be charged a significant portion of the reservation value.
+
+### No-show
+
+Failure to appear for a confirmed booking without notification may result in the booking being treated as a no-show.
+
+The exact cancellation terms presented during booking take priority over general examples in this document.
+
+---
+
+# 15. BOOKING MODIFICATIONS
+
+Customers may request changes to:
+
+* Pickup time
+* Return time
+* Pickup location
+* Return location
+* Vehicle category
+* Rental duration
+* Additional driver
+* Optional services
+
+Changes are subject to availability and may affect the total rental price.
+
+JK Rentals recommends requesting modifications as early as possible.
+
+---
+
+# PAGE 7: CUSTOMER RESPONSIBILITIES
+
+# 16. CUSTOMER RESPONSIBILITIES
+
+Customers renting from JK Rentals agree to operate vehicles responsibly and legally.
+
+The customer must:
+
+* Drive safely.
+* Follow applicable traffic laws.
+* Use the vehicle only for lawful purposes.
+* Ensure only approved drivers operate the vehicle.
+* Keep the vehicle reasonably clean.
+* Protect the vehicle from unnecessary damage.
+* Report accidents promptly.
+* Report mechanical issues promptly.
+* Return the vehicle at the agreed time.
+* Return keys and accessories.
+* Pay applicable traffic fines.
+* Pay charges resulting from their contractual responsibilities.
+
+---
+
+# 17. PROHIBITED USES
+
+JK Rentals vehicles must not be used for:
+
+* Illegal activities
+* Street racing
+* Speed competitions
+* Off-road driving unless specifically authorized
+* Commercial passenger transportation without authorization
+* Towing without approval
+* Transporting hazardous materials without authorization
+* Driver training without permission
+* Sub-renting the vehicle
+* Lending the vehicle to unauthorized drivers
+* Deliberately damaging the vehicle
+* Any activity prohibited by law
+
+Violation of these requirements may result in termination of the rental agreement.
+
+---
+
+# 18. CROSS-BORDER TRAVEL
+
+Vehicles may not be taken outside Nigeria without prior written authorization from JK Rentals.
+
+Where cross-border travel is approved, customers may be required to provide additional documentation, insurance arrangements and security deposits.
+
+Unauthorized cross-border travel may constitute a serious breach of the rental agreement.
+
+---
+
+# 19. CLEANING AND INTERIOR CONDITION
+
+Customers are expected to return vehicles in a reasonable condition.
+
+Normal use does not require professional cleaning by the customer.
+
+Additional cleaning charges may apply when a vehicle is returned with excessive:
+
+* Mud
+* Food waste
+* Stains
+* Spilled liquids
+* Strong odors
+* Pet hair
+* Damage to upholstery
+
+Smoking or other prohibited use inside the vehicle may result in a specialized cleaning charge.
+
+---
+
+# PAGE 8: ACCIDENTS, EMERGENCIES AND LATE RETURNS
+
+# 20. ACCIDENT PROCEDURE
+
+If a customer is involved in an accident, the customer's first priority should be personal safety.
+
+Where appropriate, the customer should:
+
+1. Move to a safe location if it is safe and legally appropriate to do so.
+2. Contact emergency services where necessary.
+3. Contact JK Rentals as soon as possible.
+4. Exchange required information with other involved parties.
+5. Avoid admitting liability on behalf of JK Rentals.
+6. Take photographs when it is safe and lawful.
+7. Cooperate with authorities and insurance representatives.
+8. Complete any required incident documentation.
+
+Customers should never leave the scene of an accident where applicable law requires them to remain.
+
+## 20.1 Unauthorized Repairs
+
+Customers should contact JK Rentals before authorizing significant repairs.
+
+Emergency repairs necessary to protect life, safety or the vehicle may be handled according to the circumstances and later reviewed by JK Rentals.
+
+---
+
+# 21. BREAKDOWN SUPPORT
+
+JK Rentals provides roadside assistance during eligible rental periods.
+
+Depending on the circumstances, support may include:
+
+* Remote troubleshooting
+* Towing coordination
+* Battery assistance
+* Tyre assistance
+* Replacement vehicle coordination
+* Recovery support
+
+Roadside assistance does not necessarily cover costs caused by customer negligence or prohibited vehicle use.
+
+---
+
+# 22. LATE RETURNS
+
+Customers should return vehicles at the agreed time.
+
+A grace period may be provided at the company's discretion.
+
+Late returns may result in:
+
+* Additional hourly charges
+* Additional daily rental charges
+* Loss of promotional rates
+* Recovery charges
+* Additional delivery costs
+
+If a customer needs more time, they should contact JK Rentals before the rental expires.
+
+An extension is not automatically approved simply because the customer continues to possess the vehicle.
+
+---
+
+# 23. EARLY RETURNS
+
+Returning a vehicle earlier than planned does not automatically guarantee a refund for unused rental time.
+
+Any refund or adjustment depends on the applicable booking terms.
+
+---
+
+# PAGE 9: CORPORATE RENTALS AND PRIVACY
+
+# 24. CORPORATE RENTAL PROGRAM
+
+JK Rentals offers customized transportation solutions for organizations with recurring vehicle requirements.
+
+Corporate clients may receive:
+
+* Dedicated account support
+* Monthly invoices
+* Consolidated billing
+* Multiple vehicle bookings
+* Employee rental programs
+* Long-term vehicle assignments
+* Chauffeur services
+* Priority support
+
+## 24.1 Corporate Account Requirements
+
+Organizations may be required to provide:
+
+* Company registration details
+* Authorized contact information
+* Billing information
+* Identification of authorized representatives
+* Payment information
+* Signed corporate rental agreement
+
+Corporate credit arrangements are subject to approval.
+
+---
+
+# 25. PRIVACY POLICY
+
+JK Rentals respects customer privacy and aims to handle personal information responsibly.
+
+Information collected may include:
+
+* Customer name
+* Phone number
+* Email address
+* Identification information
+* Driving licence information
+* Rental history
+* Payment records
+* Vehicle usage information
+* Communication records
+
+## 25.1 Why We Collect Information
+
+Customer information may be used to:
+
+* Process reservations
+* Verify eligibility
+* Prepare rental agreements
+* Process payments
+* Provide customer support
+* Manage vehicle rentals
+* Prevent fraud
+* Meet legal requirements
+* Resolve disputes
+* Improve service quality
+
+## 25.2 Information Security
+
+JK Rentals takes reasonable administrative and technical measures to protect customer information from unauthorized access, alteration or disclosure.
+
+Access to sensitive information is limited to personnel and service providers who require it for legitimate business purposes.
+
+## 25.3 Marketing Communications
+
+Customers may receive promotional communications where appropriate.
+
+Customers may request to stop receiving non-essential marketing communications.
+
+---
+
+# 26. CUSTOMER COMPLAINTS
+
+JK Rentals encourages customers to report concerns as soon as possible.
+
+Complaints may involve:
+
+* Vehicle condition
+* Booking problems
+* Staff conduct
+* Payment issues
+* Deposit delays
+* Billing disputes
+* Service quality
+* Vehicle availability
+
+## 26.1 Complaint Procedure
+
+Customers should provide:
+
+* Booking reference
+* Date of rental
+* Description of the issue
+* Supporting photographs or documents where applicable
+* Preferred method of contact
+
+JK Rentals aims to acknowledge customer complaints within one business day and provide a substantive response within five business days where reasonably possible.
+
+---
+
+# PAGE 10: FREQUENTLY ASKED QUESTIONS
+
+# 27. FREQUENTLY ASKED QUESTIONS
+
+### 1. How old must I be to rent a car?
+
+The standard minimum age for self-drive rentals is 23 years. Certain vehicle categories may require a higher minimum age.
+
+### 2. Do I need a driving licence?
+
+Yes. Customers renting vehicles for self-drive must have a valid driving licence appropriate for the vehicle.
+
+### 3. Can someone else drive my rental car?
+
+Only drivers approved and registered with JK Rentals may operate the rental vehicle.
+
+### 4. Is a security deposit required?
+
+Yes, most self-drive rentals require a refundable security deposit.
+
+### 5. When will I receive my deposit back?
+
+Where there are no outstanding charges, deposits are generally released within 3 to 7 business days after the final inspection.
+
+### 6. Can I rent a car for one day?
+
+Yes. Standard rentals can generally be booked for a minimum of 24 hours.
+
+### 7. Can I rent a vehicle for several months?
+
+Yes. Long-term rental arrangements are available subject to vehicle availability and contract approval.
+
+### 8. Can I take the vehicle outside Lagos?
+
+Yes, subject to the rental agreement and any applicable geographic restrictions.
+
+### 9. Can I take the vehicle outside Nigeria?
+
+Only with prior written authorization from JK Rentals.
+
+### 10. Do your vehicles come with fuel?
+
+Vehicles are provided with an agreed fuel level. Customers are generally expected to return them with the agreed level.
+
+### 11. Can I request a chauffeur?
+
+Yes. Chauffeur-driven services are available for selected vehicles and bookings.
+
+### 12. Can JK Rentals deliver the vehicle?
+
+Vehicle delivery is available in selected locations and may attract a delivery fee.
+
+### 13. What happens if I return the car late?
+
+Late returns may attract additional charges. Customers should contact JK Rentals before the scheduled return time if they require an extension.
+
+### 14. What happens if the vehicle breaks down?
+
+Contact JK Rentals immediately. Our support team will coordinate appropriate assistance depending on the situation.
+
+### 15. What should I do after an accident?
+
+Prioritize safety, contact the appropriate authorities where necessary and notify JK Rentals as soon as possible.
+
+### 16. Can I use the rental car for ride-hailing?
+
+Only if the vehicle has been specifically authorized for such use under a written agreement. Standard rentals do not automatically permit commercial passenger transportation.
+
+### 17. Can I use the vehicle for a wedding?
+
+Yes. JK Rentals offers event and wedding vehicle rentals, including selected premium vehicles and chauffeur services.
+
+### 18. Can I add another driver?
+
+Yes, provided the additional driver meets the company's eligibility requirements and is formally approved.
+
+### 19. Can I cancel my booking?
+
+Yes. Cancellation is permitted according to the cancellation terms associated with the booking.
+
+### 20. Can I change my pickup date?
+
+Usually, yes. Changes are subject to availability and may affect pricing.
+
+### 21. Do you provide airport pickup?
+
+Yes. Airport transfer and vehicle delivery services may be arranged in advance.
+
+### 22. What documents do I need?
+
+Depending on the rental type, you may need a valid driving licence, government-issued identification, contact information and other verification documents.
+
+### 23. What if I lose the vehicle keys?
+
+Contact JK Rentals immediately. Replacement and recovery costs may be charged to the renter.
+
+### 24. What happens if I receive a traffic ticket?
+
+The customer is generally responsible for traffic violations and associated penalties incurred during the rental period.
+
+### 25. Can I smoke inside the vehicle?
+
+Smoking inside JK Rentals vehicles is prohibited unless specifically authorized.
+
+### 26. Can I bring pets?
+
+Pets may be permitted in selected vehicles subject to prior approval and appropriate cleaning requirements.
+
+### 27. What happens if I damage the vehicle?
+
+The incident will be documented and assessed according to the rental agreement and applicable protection terms.
+
+### 28. Can I choose a specific vehicle?
+
+Customers may request a specific vehicle, but availability is not guaranteed until confirmed by JK Rentals.
+
+### 29. Do you offer corporate discounts?
+
+Corporate customers may qualify for customized rates based on rental volume, duration and agreement terms.
+
+### 30. How do I contact JK Rentals?
+
+Customers can contact the support team through the company's approved phone, email or website channels.
+
+---
+
+# 28. TERMS AND CONDITIONS
+
+By accepting a JK Rentals vehicle, the customer acknowledges and agrees to the applicable rental agreement and associated terms.
+
+## 28.1 Rental Agreement
+
+The rental agreement identifies the vehicle, renter, rental period, applicable charges and relevant conditions.
+
+## 28.2 Vehicle Ownership
+
+All vehicles remain the property of JK Rentals or its authorized fleet partners. A rental agreement does not transfer ownership of the vehicle to the customer.
+
+## 28.3 Authorized Use
+
+The vehicle may only be used for lawful purposes and by approved drivers.
+
+## 28.4 Customer Responsibility
+
+The customer is responsible for complying with the rental agreement and taking reasonable care of the vehicle.
+
+## 28.5 Charges
+
+The customer agrees to pay applicable rental charges, deposits, penalties and other amounts arising under the rental agreement.
+
+## 28.6 Vehicle Recovery
+
+JK Rentals may take appropriate steps to recover a vehicle where the customer materially breaches the rental agreement, subject to applicable law.
+
+## 28.7 Agreement Termination
+
+JK Rentals may terminate a rental where continued use presents a safety, legal or material contractual concern.
+
+## 28.8 Changes to Terms
+
+JK Rentals may update its general policies from time to time. The terms applicable to an existing booking will generally be those communicated and accepted at the time of booking, unless otherwise required by law or agreed by the parties.
+
+---
+
+# 29. SERVICE STANDARDS
+
+JK Rentals aims to maintain the following operational standards:
+
+### Vehicle Readiness
+
+Vehicles should undergo appropriate inspection before customer handover.
+
+### Customer Communication
+
+Customers should receive clear information regarding:
+
+* Rental price
+* Pickup instructions
+* Required documents
+* Deposit
+* Return requirements
+* Additional charges
+
+### Cleanliness
+
+Vehicles should be presented in a clean and reasonably maintained condition.
+
+### Safety
+
+Vehicles should be maintained according to applicable maintenance requirements.
+
+### Support
+
+Customers should have access to an appropriate support channel during eligible rental periods.
+
+---
+
+# 30. CONTACT INFORMATION
+
+## JK RENTALS
+
+**Head Office:**
+24 Adeola Crescent
+Ikeja, Lagos
+Nigeria
+
+**Customer Support:**
++234 800 555 0199
+
+**Email:**
+[hello@jkrentals.example](mailto:hello@jkrentals.example)
+
+**Website:**
+[www.jkrentals.example](http://www.jkrentals.example)
+
+**Business Hours:**
+Monday to Sunday
+7:00 AM to 9:00 PM
+
+---
+
+# FINAL NOTE
+
+This document is a comprehensive business documentation template for JK Rentals. Company registration information, actual pricing, insurance arrangements, legal terms, payment information, contact details and regulatory requirements should be reviewed and replaced with verified business information before publication or use as a binding legal document.
+
+**JK Rentals**
+*Reliable Cars. Flexible Journeys. Professional Service.*
