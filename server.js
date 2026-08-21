@@ -493,7 +493,7 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
         const requestPayload = {
           contents: [{ role: 'user', parts: [{ text: `${systemPrompt}\n\nUSER: ${customer_message}` }] }],
           tools: tools,
-          generationConfig: { maxOutputTokens: 800, temperature: 0.7 }
+          generationConfig: { maxOutputTokens: 1000, temperature: 0.5 }
         };
 
         const aiResponse = await chatModel.generateContent(requestPayload);
@@ -669,7 +669,7 @@ ${customer_message}
 Action result:
 ${JSON.stringify(toolResponseData)}` }]
             }],
-            generationConfig: { maxOutputTokens: 800, temperature: 0.4 }
+            generationConfig: { maxOutputTokens: 1000, temperature: 0.4 }
           });
 
           botReply = getSafeModelText(followUp.response, 'follow-up');
