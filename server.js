@@ -9,7 +9,7 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SER
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 
 const embeddingModel = genAI.getGenerativeModel({ model: "gemini-embedding-001" })
-const chatModel = genAI.getGenerativeModel({ model: "gemini-3.6-flash" }) 
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'anthropic/claude-haiku-4.5'
 
 const TELEGRAM_QUEUE_NAME = 'telegram_messages'
 const TELEGRAM_VENDOR_ID = 'a5f7f363-4ef1-4c66-bf59-27211a0d5f27'
@@ -65,6 +65,45 @@ const tools = [{
     }
   ]
 }];
+
+const openRouterTools = tools[0].functionDeclarations.map(tool => ({
+  type: 'function',
+  function: {
+    name: tool.name,
+    description: tool.description,
+    parameters: tool.parameters
+  }
+}))
+
+async function generateChatCompletion({ messages, useTools = false, max_tokens = 1000, temperature = 0.5 }) {
+  if (!process.env.OPENROUTER_API_KEY) {
+    throw new Error('OPENROUTER_API_KEY is not configured')
+  }
+
+  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': process.env.APP_URL || 'https://social-commerce.onrender.com',
+      'X-Title': 'Social Commerce AI Agent'
+    },
+    body: JSON.stringify({
+      model: OPENROUTER_MODEL,
+      messages,
+      ...(useTools ? { tools: openRouterTools, tool_choice: 'auto' } : {}),
+      max_tokens,
+      temperature
+    })
+  })
+
+  const data = await response.json()
+  if (!response.ok) {
+    throw new Error(`OpenRouter request failed (${response.status}): ${data.error?.message || 'Unknown error'}`)
+  }
+
+  return data
+}
 
 fastify.get('/', async () => {
   return 'Omnichannel AI Agent is Live! 🟢'
@@ -345,7 +384,7 @@ async function embedText(text) {
 }
 
 function getSafeModelText(response, label) {
-  const text = response.text()?.trim()
+  const text = response.choices?.[0]?.message?.content?.trim()
   const looksLikeInternalFragment =
     !text ||
     text.length < 20 ||
@@ -356,10 +395,10 @@ function getSafeModelText(response, label) {
 
   fastify.log.warn({
     label,
-    finishReason: response.candidates?.[0]?.finishReason,
+    finishReason: response.choices?.[0]?.finish_reason,
     text,
-    parts: response.candidates?.[0]?.content?.parts
-  }, 'Gemini returned unusable customer text')
+    message: response.choices?.[0]?.message
+  }, 'OpenRouter returned unusable customer text')
 
   return 'I found some vehicle options for you. Which type of car are you interested in?'
 }
@@ -490,18 +529,21 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
           ` : ''}
         `;
 
-        const requestPayload = {
-          contents: [{ role: 'user', parts: [{ text: `${systemPrompt}\n\nUSER: ${customer_message}` }] }],
-          tools: tools,
-          generationConfig: { maxOutputTokens: 1000, temperature: 0.5 }
-        };
-
-        const aiResponse = await chatModel.generateContent(requestPayload);
+        const aiResponse = await generateChatCompletion({
+          messages: [{ role: 'user', content: `${systemPrompt}\n\nUSER: ${customer_message}` }],
+          useTools: true,
+          max_tokens: 1000,
+          temperature: 0.5
+        })
         fastify.log.info({
-          finishReason: aiResponse.response.candidates?.[0]?.finishReason,
-          text: aiResponse.response.text()
-        }, 'Gemini response');
-        const functionCall = aiResponse.response.functionCalls()?.[0];
+          finishReason: aiResponse.choices?.[0]?.finish_reason,
+          text: aiResponse.choices?.[0]?.message?.content
+        }, 'OpenRouter response');
+        const toolCall = aiResponse.choices?.[0]?.message?.tool_calls?.[0]
+        const functionCall = toolCall ? {
+          name: toolCall.function.name,
+          args: JSON.parse(toolCall.function.arguments || '{}')
+        } : null
 
         // ---------------------------------------------------------
         // 💡 3. THE SPLIT TOOL HANDLER LOGIC
@@ -655,10 +697,10 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
           }
 
           // Generate customer-facing text separately so the model cannot chain another tool call.
-          const followUp = await chatModel.generateContent({
-            contents: [{
+          const followUp = await generateChatCompletion({
+            messages: [{
               role: 'user',
-              parts: [{ text: `${systemPrompt}
+              content: `${systemPrompt}
 
 The internal action has already been completed. Do not call any tool and do not discuss internal actions.
 Use the result below to write only one short, complete, customer-facing reply.
@@ -667,21 +709,22 @@ Customer message:
 ${customer_message}
 
 Action result:
-${JSON.stringify(toolResponseData)}` }]
+${JSON.stringify(toolResponseData)}`
             }],
-            generationConfig: { maxOutputTokens: 1000, temperature: 0.4 }
-          });
+            max_tokens: 1000,
+            temperature: 0.4
+          })
 
-          botReply = getSafeModelText(followUp.response, 'follow-up');
+          botReply = getSafeModelText(followUp, 'follow-up');
           fastify.log.info({
-            finishReason: followUp.response.candidates?.[0]?.finishReason,
+            finishReason: followUp.choices?.[0]?.finish_reason,
             text: botReply, 
             toolResponseData,
             followUp
-          }, 'Gemini follow-up response');
+          }, 'OpenRouter follow-up response');
         } else {
           // Standard reply if no tool was fired
-          botReply = getSafeModelText(aiResponse.response, 'initial');
+          botReply = getSafeModelText(aiResponse, 'initial');
         }
 
         await supabase.from('chat_history').insert({

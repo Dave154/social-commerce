@@ -12,6 +12,10 @@ services:
         sync: false
       - key: GEMINI_API_KEY
         sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: anthropic/claude-haiku-4.5
       - key: TELEGRAM_BOT_TOKEN
         sync: false
       - key: PAYSTACK_SECRET_KEY
