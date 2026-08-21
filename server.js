@@ -742,7 +742,10 @@ fastify.post('/telegram-webhook', async (request, reply) => {
   return reply.code(200).send({ status: 'queued' });
 });
 
-fastify.listen({ port: 3000 }, (err, address) => {
+fastify.listen({
+  port: Number(process.env.PORT) || 3000,
+  host: '0.0.0.0'
+}, (err, address) => {
   if (err) process.exit(1)
   startTelegramQueueWorker()
   console.log(`🚀 Server listening with Checkout Engine on ${address}`)
