@@ -663,15 +663,21 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
               toolResponseData = { status: 'error', message: 'Ask the customer to choose pay via link or pay via transfer.' };
             } else {
 
-            // Fetch the actual product price from DB
-            const { data: product, error: productError } = await supabase
+            const rentalDays = Number(booking.rental_days);
+            const { data: selectedProduct, error: productError } = await supabase
               .from('products')
               .select('id, product_name, price, currency')
               .eq('id', booking.product_id)
               .eq('vendor_id', vendor_id)
               .maybeSingle();
 
-            if (productError || !product || product.price == null || !booking.rental_days) {
+            if (
+              productError ||
+              !selectedProduct ||
+              selectedProduct.price == null ||
+              !Number.isInteger(rentalDays) ||
+              rentalDays <= 0
+            ) {
               fastify.log.error({
                 productError,
                 bookingId: booking.id,
@@ -686,8 +692,40 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
               };
             } else {
 
-            // Calculate Math (Paystack needs amounts in Kobo)
-            const totalNaira = Number(product.price) * Number(booking.rental_days);
+            const rateSearch = selectedProduct.product_name.replace(/weekly|daily/gi, '').replace(/rate/gi, '').trim();
+            let rateQuery = supabase
+              .from('products')
+              .select('id, product_name, price, currency')
+              .eq('vendor_id', vendor_id)
+              .not('price', 'is', null);
+
+            if (rateSearch) {
+              rateQuery = rateQuery.ilike('product_name', `%${rateSearch}%`);
+            }
+
+            const { data: rateProducts, error: rateError } = await rateQuery;
+            const dailyProduct = rateProducts?.find(product => /daily/i.test(product.product_name));
+            const weeklyProduct = rateProducts?.find(product => /weekly/i.test(product.product_name));
+
+            if (rateError || !dailyProduct || !weeklyProduct) {
+              fastify.log.error({
+                rateError,
+                selectedProduct: selectedProduct.product_name,
+                rateSearch,
+                rateProducts
+              }, 'Cannot generate checkout: daily and weekly rates are required');
+
+              toolResponseData = {
+                status: 'error',
+                message: 'The daily and weekly rates for this vehicle are unavailable right now.'
+              };
+            } else {
+            // Calculate full weeks plus remaining days from catalog rates.
+            const fullWeeks = Math.floor(rentalDays / 7);
+            const remainingDays = rentalDays % 7;
+            const totalNaira =
+              fullWeeks * Number(weeklyProduct.price) +
+              remainingDays * Number(dailyProduct.price);
             const totalKobo = Math.round(totalNaira * 100);
 
             // Create the Order in your database
@@ -699,8 +737,8 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
                 amount_expected: totalNaira, 
                 payment_status: 'pending',
                 vendor_id: vendor_id,                 
-                product_id: booking.product_id,      
-                product_purchased: product.product_name
+                product_id: booking.product_id,
+                product_purchased: selectedProduct.product_name
               })
   .select().single();
             // Link the new order to the booking
@@ -762,6 +800,7 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
               };
             } else {
               toolResponseData = { status: 'error', message: 'Could not generate the selected payment option right now.' };
+            }
             }
             }
             }
