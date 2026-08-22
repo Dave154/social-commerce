@@ -510,6 +510,7 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
           3. AMBIGUITY RULE: If a user requests a vehicle (e.g., Highlander) that exists in MULTIPLE product categories (e.g., SUV Daily and SUV Weekly), do NOT guess the product_id. Instead, ask the user a single clarifying question to determine which category fits their needs.
           4. CHECKOUT RULE: When the booking state has NO null fields, ask whether they are ready to pay and offer exactly two choices: pay via link (a Paystack checkout link) or pay via transfer (temporary bank account details). If they choose a method, call generate_checkout with that method. Never choose a method for them.
           5. CATALOG RULE: When the customer asks what vehicles are available or asks about a vehicle, category, feature, or price, you MUST call search_products. Use 'all' for a general catalog request. Product details are available only through that tool.
+          6. CONVERSATIONAL MESSAGES: Do not call search_products for greetings, thanks, confirmations, reactions, or casual messages such as "nice", "okay", "great", or "thanks". Reply naturally unless the customer is asking for vehicle information. Never claim products were found when the products array is empty.
 
           === POLICIES ===
           ${policyString}
@@ -630,18 +631,27 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
                 };
               }
 
-              toolResponseData = {
-                status: 'success',
-                search_term: searchTerm,
-                exact_product_selected: Boolean(exactProduct),
-                products: (matchingProducts || []).map(product => ({
-                  id: product.id,
-                  name: product.product_name,
-                  price: product.price,
-                  currency: product.currency,
-                  description: product.description
-                }))
-              };
+              const products = (matchingProducts || []).map(product => ({
+                id: product.id,
+                name: product.product_name,
+                price: product.price,
+                currency: product.currency,
+                description: product.description
+              }));
+
+              toolResponseData = products.length > 0
+                ? {
+                    status: 'success',
+                    search_term: searchTerm,
+                    exact_product_selected: Boolean(exactProduct),
+                    products
+                  }
+                : {
+                    status: 'no_results',
+                    search_term: searchTerm,
+                    products: [],
+                    message: 'No matching vehicles were found. Ask the customer whether they want to search another term.'
+                  };
             }
           }
           
