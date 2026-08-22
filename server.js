@@ -469,21 +469,21 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
         const { data: shortTermHistory } = await supabase
           .from('chat_history').select('role, content')
           .eq('vendor_id', vendor_id).eq('customer_id', customer_id).eq('channel', channel)
-          .order('created_at', { ascending: false }).limit(1)
+          .order('created_at', { ascending: false }).limit(3)
 
         const recentChatText = shortTermHistory && shortTermHistory.length > 0
           ? shortTermHistory.reverse().map(msg => `${msg.role.toUpperCase()}: ${msg.content}`).join('\n')
           : "No recent conversation."
 
         const { data: longTermHistory } = await supabase.rpc('match_chat_history', {
-          query_embedding: userVector, match_threshold: 0.5, match_count: 2, p_vendor_id: vendor_id, p_customer_id: customer_id
+          query_embedding: userVector, match_threshold: 0.5, match_count: 5, p_vendor_id: vendor_id, p_customer_id: customer_id
         })
 
         const pastContextText = longTermHistory && longTermHistory.length > 0
           ? longTermHistory.map(msg => `- ${msg.content}`).join('\n') : "No relevant past context."
 
         const { data: chunks } = await supabase.rpc('match_knowledge_chunks', {
-          query_embedding: userVector, match_threshold: 0.5, match_count: 2, p_vendor_id: vendor_id
+          query_embedding: userVector, match_threshold: 0.5, match_count: 5, p_vendor_id: vendor_id
         })
 
         const policyString = chunks ? chunks.map(c => c.content).join('\n\n') : ""
@@ -529,18 +529,24 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
           ` : ''}
         `;
 
+        const initialMessages = [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: customer_message }
+        ]
         const aiResponse = await generateChatCompletion({
-          messages: [{ role: 'user', content: `${systemPrompt}\n\nUSER: ${customer_message}` }],
+          messages: initialMessages,
           useTools: true,
-          max_tokens: 1000,
-          temperature: 0.5
+          max_tokens: 300,
+          temperature: 0.7
         })
         fastify.log.info({
           finishReason: aiResponse.choices?.[0]?.finish_reason,
           text: aiResponse.choices?.[0]?.message?.content
         }, 'OpenRouter response');
-        const toolCall = aiResponse.choices?.[0]?.message?.tool_calls?.[0]
+        const assistantMessage = aiResponse.choices?.[0]?.message
+        const toolCall = assistantMessage?.tool_calls?.[0]
         const functionCall = toolCall ? {
+          id: toolCall.id,
           name: toolCall.function.name,
           args: JSON.parse(toolCall.function.arguments || '{}')
         } : null
@@ -562,8 +568,25 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
                 rental_days: args.rental_days || booking.rental_days,
                 delivery_address: args.delivery_address || booking.delivery_address
               }).eq('id', booking.id);
-            
-            toolResponseData = { status: 'success' };
+
+            booking = {
+              ...booking,
+              customer_name: args.customer_name || booking.customer_name,
+              selected_vehicle: args.selected_vehicle || booking.selected_vehicle,
+              product_id: args.product_id || booking.product_id,
+              rental_days: args.rental_days || booking.rental_days,
+              delivery_address: args.delivery_address || booking.delivery_address
+            }
+            toolResponseData = {
+              status: 'success',
+              booking_state: {
+                customer_name: booking.customer_name,
+                selected_vehicle: booking.selected_vehicle,
+                product_id: booking.product_id,
+                rental_days: booking.rental_days,
+                delivery_address: booking.delivery_address
+              }
+            };
           } 
 
           else if (functionCall.name === 'search_products') {
@@ -696,22 +719,19 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
             }
           }
 
-          // Generate customer-facing text separately so the model cannot chain another tool call.
+          // Continue the same conversation with the native tool result.
           const followUp = await generateChatCompletion({
-            messages: [{
-              role: 'user',
-              content: `${systemPrompt}
-
-The internal action has already been completed. Do not call any tool and do not discuss internal actions.
-Use the result below to write only one short, complete, customer-facing reply.
-
-Customer message:
-${customer_message}
-
-Action result:
-${JSON.stringify(toolResponseData)}`
-            }],
-            max_tokens: 1000,
+            messages: [
+              ...initialMessages,
+              assistantMessage,
+              {
+                role: 'tool',
+                tool_call_id: functionCall.id,
+                name: functionCall.name,
+                content: JSON.stringify(toolResponseData)
+              }
+            ],
+            max_tokens: 300,
             temperature: 0.4
           })
 
