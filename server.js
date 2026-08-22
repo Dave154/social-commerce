@@ -26,7 +26,7 @@ const tools = [{
       parameters: {
         type: SchemaType.OBJECT,
         properties: {
-          product_id: { type: SchemaType.STRING, description: "The exact database ID of the product category that matches the user's requested vehicle. Leave null if ambiguous." },
+          product_id: { type: SchemaType.STRING, description: "The exact UUID returned by search_products for the selected product. Never invent or guess this value; leave null if the product is ambiguous or has not been found." },
           selected_vehicle: { type: SchemaType.STRING, description: "The literal name of the vehicle the user requested (e.g., 'Toyota Highlander')" },
           rental_days: { type: SchemaType.NUMBER, description: "Number of days for the rental" },
           customer_name: { type: SchemaType.STRING, description: "The customer's name" },
@@ -610,9 +610,30 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
             if (productSearchError) {
               toolResponseData = { status: 'error', message: 'Product search is temporarily unavailable.' };
             } else {
+              const exactProduct = matchingProducts?.length === 1 ? matchingProducts[0] : null;
+
+              if (exactProduct) {
+                const { error: bookingUpdateError } = await supabase
+                  .from('bookings')
+                  .update({
+                    product_id: exactProduct.id,
+                    selected_vehicle: exactProduct.product_name
+                  })
+                  .eq('id', booking.id);
+
+                if (bookingUpdateError) throw bookingUpdateError;
+
+                booking = {
+                  ...booking,
+                  product_id: exactProduct.id,
+                  selected_vehicle: exactProduct.product_name
+                };
+              }
+
               toolResponseData = {
                 status: 'success',
                 search_term: searchTerm,
+                exact_product_selected: Boolean(exactProduct),
                 products: (matchingProducts || []).map(product => ({
                   id: product.id,
                   name: product.product_name,
@@ -633,15 +654,31 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
             } else {
 
             // Fetch the actual product price from DB
-            const { data: product } = await supabase
+            const { data: product, error: productError } = await supabase
               .from('products')
-              .select('price')
+              .select('id, product_name, price, currency')
               .eq('id', booking.product_id)
-              .single();
+              .eq('vendor_id', vendor_id)
+              .maybeSingle();
+
+            if (productError || !product || product.price == null || !booking.rental_days) {
+              fastify.log.error({
+                productError,
+                bookingId: booking.id,
+                productId: booking.product_id,
+                rentalDays: booking.rental_days,
+                vendorId: vendor_id
+              }, 'Cannot generate checkout: invalid booking product or rental duration');
+
+              toolResponseData = {
+                status: 'error',
+                message: 'The selected product or rental duration is missing. Please select an exact vehicle and provide the number of rental days again.'
+              };
+            } else {
 
             // Calculate Math (Paystack needs amounts in Kobo)
-            const totalNaira = product.price * booking.rental_days;
-            const totalKobo = totalNaira * 100;
+            const totalNaira = Number(product.price) * Number(booking.rental_days);
+            const totalKobo = Math.round(totalNaira * 100);
 
             // Create the Order in your database
             const { data: newOrder } = await supabase
@@ -653,7 +690,7 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
                 payment_status: 'pending',
                 vendor_id: vendor_id,                 
                 product_id: booking.product_id,      
-                product_purchased: booking.selected_vehicle
+                product_purchased: product.product_name
               })
   .select().single();
             // Link the new order to the booking
@@ -715,6 +752,7 @@ async function processIncomingMessage({ customer_id, customer_message, vendor_id
               };
             } else {
               toolResponseData = { status: 'error', message: 'Could not generate the selected payment option right now.' };
+            }
             }
             }
           }
